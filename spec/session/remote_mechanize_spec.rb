@@ -9,9 +9,9 @@ describe Capybara::Session do
     after(:each) do
       Capybara.app_host = nil
     end
-    
-    
-    before do      
+
+
+    before do
       @session = Capybara::Session.new(:mechanize)
     end
 

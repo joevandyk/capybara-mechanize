@@ -1,7 +1,7 @@
 Capybara-mechanize
 ==================
 
-This gems makes it possible to use Capybara for (partially) remote testing. It inherits most functionality from the RackTest driver and only uses [Mechanize](http://github.com/tenderlove/mechanize) for remote requests. 
+This gems makes it possible to use Capybara for (partially) remote testing. It inherits most functionality from the RackTest driver and only uses [Mechanize](http://github.com/tenderlove/mechanize) for remote requests.
 
 It is currently in use to test the integration between a Rails application and Twitter authorization and sharing.
 
@@ -28,26 +28,26 @@ The following scenario will then be using the Mechanize driver
     @mechanize
     Scenario: do something remote
       When I click the remote link
-      
+
 ### Remote testing
 
 When you want to use this driver to test a remote application. You have to set the app_host:
 
     Capybara.app_host = "http://www.yourapp.com"
-    
+
 Note that I haven't tested this case for my self yet. The Capybara tests pass for this situation though so it should work! Please provide me with feedback if it doesn't.
 
 ## Running tests
 
 Until this library is merged with capybara there needs to be local app and you need to add the following to your host file:
 
-    127.0.0.1 capybara-testapp.heroku.com 
+    127.0.0.1 capybara-testapp.heroku.com
 
 Run bundler
 
     bundle install
 
-Run the app with the following line: 
+Run the app with the following line:
 
     bundle exec ruby -rrubygems lib/capybara/spec/extended_test_app.rb
 
@@ -62,7 +62,7 @@ Todo
 
 Note on Patches/Pull Requests
 -----------------------------
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a

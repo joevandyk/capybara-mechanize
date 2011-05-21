@@ -26,17 +26,17 @@ describe Capybara::Session do
         @session.body.should == 'The requested object was deleted'
       end
     end
-    
+
     it "should use the last remote url when following relative links" do
       @session.visit("#{REMOTE_TEST_URL}/relative_link_to_host")
       @session.click_link "host"
       @session.body.should == "current host is #{REMOTE_TEST_HOST}, method get"
     end
-    
+
     it "should use the last remote url when submitting a form with a relative action" do
       @session.visit("#{REMOTE_TEST_URL}/form_with_relative_action_to_host")
       @session.click_button "submit"
-      @session.body.should == "current host is #{REMOTE_TEST_HOST}, method post"      
+      @session.body.should == "current host is #{REMOTE_TEST_HOST}, method post"
     end
 
     it_should_behave_like "session"
